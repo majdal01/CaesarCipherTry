@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <title>Caesar Cipher program</title>
+</head>
+<body>
+    
+    <header id="header">
+        <h1>Caesar Cipher program</h1>
+        <p>Krypter din besked med Caesar Cipher metoden herunder</p>
+    </header>
+
+    <main>
+
+        <section id="wrapper">
+            <label for="text">Indtast teksten der skal krypteres</label>
+            <span id="alert-tekst" class="hidden"></span>
+            <textarea name="text" id="textFelt"></textarea>
+
+            <div id="skift-wrapper">
+                <label for="skift">Indtast skift værdi</label>
+                <span id="alert-skift" class="hidden"></span>
+                <input type="number" id="skiftInput">
+            </div>
+
+            <div id="knapper">
+                <button type="button" id="krypterBtn">Krypter</button>
+                <button type="button" id="dekrypterBtn">Dekrypter</button>
+            </div>
+
+            <span id="alert-dekrypter" class="hidden"></span>
+
+            <div id="resultat-wrapper">
+                <h2>Resultat</h2>
+                <div id="output"></div>
+            </div>
+
+            <button type="button" id="resetknap">Nulstil</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made by Maja, upcoming webudvikler</p>
+    </footer>
+
+</body>
+</html>
