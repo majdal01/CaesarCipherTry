@@ -16,31 +16,31 @@
 
     <main>
 
-        <section id="wrapper">
-            <label for="text">Indtast teksten der skal krypteres</label>
-            <span id="alert-tekst" class="hidden"></span>
-            <textarea name="text" id="textFelt"></textarea>
+        <form id="wrapper">
+            <label for="textFelt">Indtast teksten der skal krypteres</label>
+            <span id="alert-tekst" class="hidden" role="alert"></span>
+            <textarea name="text" id="textFelt" aria-describedby="alert-tekst"></textarea>
 
             <div id="skift-wrapper">
-                <label for="skift">Indtast skift værdi</label>
-                <span id="alert-skift" class="hidden"></span>
-                <input type="number" id="skiftInput">
+                <label for="skiftInput">Indtast skift værdi</label>
+                <span id="alert-skift" class="hidden" role="alert"></span>
+                <input type="number" id="skiftInput" inputmode="numeric"  aria-describedby="alert-skift">
             </div>
 
             <div id="knapper">
-                <button type="button" id="krypterBtn">Krypter</button>
-                <button type="button" id="dekrypterBtn">Dekrypter</button>
+                <button type="submit" id="krypterBtn">Krypter</button>
+                <button type="submit" id="dekrypterBtn">Dekrypter</button>
             </div>
 
-            <span id="alert-dekrypter" class="hidden"></span>
+            <span id="alert-dekrypter" class="hidden" role="alert"></span>
 
             <div id="resultat-wrapper">
                 <h2>Resultat</h2>
-                <div id="output"></div>
+                <div id="output" aria-live="polite" aria-atomic="true"></div>
             </div>
 
-            <button type="button" id="resetknap">Nulstil</button>
-        </section>
+            <button type="reset" id="resetknap">Nulstil</button>
+        </form>
 
     </main>
 
