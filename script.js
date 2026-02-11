@@ -1,3 +1,4 @@
+
 const form = document.getElementById("wrapper");
 const inputText = document.getElementById("textFelt");
 const alertTekst = document.getElementById("alert-tekst");
@@ -69,4 +70,12 @@ form.addEventListener("submit", (event) => {
         const dekrypteretTekst = caesarCipher(resultat.textContent, -shiftValue);
         resultat.textContent = dekrypteretTekst;
     }
+});
+
+resetBtn.addEventListener("click", () => {
+    resultat.textContent = "";
+    alertTekst.classList.add("hidden");
+    alertSkift.classList.add("hidden");
+    alertDekrypter.classList.add("hidden");
+    inputText.focus();
 });
